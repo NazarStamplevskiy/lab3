@@ -1,0 +1,16 @@
+{
+    "name": "lab3",
+    "version": "0.0.0",
+    "private": true,
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.16.4",
+        "mongodb": "^3.2.6",
+        "monk": "^6.0.6",
+        "path": "^0.12.7",
+        "pug": "^2.0.3"
+    }
+}

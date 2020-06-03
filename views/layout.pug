@@ -1,0 +1,22 @@
+include ./mixins/navbar
+
+doctype html
+html
+  head
+    title Lab3
+    block styles
+      link(rel='stylesheet' href='/public/css/main.css')
+      link(rel="stylesheet" href="/public/css/bootstrap.min.css")
+  body
+    +nav(Lab3, 'main_menu')
+      +nav_item( '/' ) Home
+      +nav_item( '/passengers' ) Passenger
+      +nav_item( '/trains' ) Trains
+      +nav_item( '/tickets' ) Tickets
+      +nav_item( '/statistics' ) Statistics
+    div.main.container
+        block content
+    block scripts
+        script(src="/public/js/jquery-3.1.1.min.js")
+        script(src="/public/js/bootstrap.min.js")
+        script(src='/public/js/main.js')

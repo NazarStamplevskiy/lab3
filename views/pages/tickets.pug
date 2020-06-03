@@ -1,0 +1,55 @@
+extends ../layout
+
+block content
+    h3 Tickets
+    form(class="form-inline")
+        div(class="form-group")
+            label ID
+            input(type="number" class="form-control" id="inputId")
+        div(class="form-group")
+            label Price
+            input(type="number" class="form-control" id="inputPrice")
+        div(class="form-group")
+            label Passenger
+            select(class="form-control" id="inputPassengerId")
+        div(class="form-group")
+            label Train
+            select(class="form-control" id="inputTrainId")
+        div(class="form-group")
+            label Seat
+            input(type="number" class="form-control" id="inputSeat")
+        div(class="form-group")
+            label Date
+            input(type="date" class="form-control" id="inputDate")
+        button(type="submit" class="btn btn-primary" id="createTicketButton") Create Ticket
+    table(id="ticketsList" class="table table-bordered table-hover")
+        thead
+            th ID
+            th Price
+            th Passenger
+            th Train
+            th Seat
+            th Date
+            th Delete
+        tbody
+    pre(id="ticketInfo")
+        strong ID: 
+        span(id="ticketInfoId")
+        br
+        strong Price: 
+        span(id="ticketInfoPrice")
+        br
+        strong Passenger: 
+        span(id="ticketInfoPassenger")
+        br
+        strong Train: 
+        span(id="ticketInfoTrain")
+        br
+        strong Seat: 
+        span(id="ticketInfoSeat")
+        br
+        strong Date: 
+        span(id="ticketInfoDate")
+
+block append scripts
+    script(src='/public/js/tickets.js')

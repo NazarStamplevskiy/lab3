@@ -1,0 +1,34 @@
+extends ../layout
+
+block content
+    h3 Passengers
+    form(class="form-inline")
+        div(class="form-group")
+            label ID
+            input(type="number" class="form-control" id="inputId")
+        div(class="form-group")
+            label Name
+            input(type="text" class="form-control" id="inputName")
+        div(class="form-group")
+            label Surname
+            input(type="text" class="form-control" id="inputSurname")
+        button(type="submit" class="btn btn-primary" id="createUserButton") Create passenger
+    table(id="passengersList" class="table table-bordered table-hover")
+        thead
+            th ID
+            th Name
+            th Surname
+            th Delete
+        tbody
+    pre(id="passengerInfo")
+        strong ID: 
+        span(id="passengerInfoId")
+        br
+        strong Name: 
+        span(id="passengerInfoName")
+        br
+        strong Surname: 
+        span(id="passengerInfoSurname")
+
+block append scripts
+    script(src='/public/js/passengers.js')

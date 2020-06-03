@@ -1,0 +1,44 @@
+extends ../layout
+
+block content
+    h3 Trains
+    form(class="form-inline")
+        div(class="form-group")
+            label ID
+            input(type="number" class="form-control" id="inputId")
+        div(class="form-group")
+            label Name
+            input(type="text" class="form-control" id="inputName")
+        div(class="form-group")
+            label Start
+            input(type="text" class="form-control" id="inputRouteStart")
+        div(class="form-group")
+            label Finish
+            input(type="text" class="form-control" id="inputRouteFinish")
+        div(class="form-group")
+            label Seats
+            input(type="number" class="form-control" id="inputSeats")
+        button(type="submit" class="btn btn-primary" id="createTrainButton") Create Train
+    table(id="trainsList" class="table table-bordered table-hover")
+        thead
+            th ID
+            th Name
+            th Route
+            th Seats
+            th Delete
+        tbody
+    pre(id="trainInfo")
+        strong ID: 
+        span(id="trainInfoId")
+        br
+        strong Name: 
+        span(id="trainInfoName")
+        br
+        strong Route: 
+        span(id="trainInfoRoute")
+        br
+        strong Seats: 
+        span(id="trainInfoSeats")
+
+block append scripts
+    script(src='/public/js/trains.js')

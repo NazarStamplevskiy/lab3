@@ -1,0 +1,42 @@
+extends ../layout
+
+block content
+    h2(class="text-center") Statistics
+    h3 Most popular routes
+    table(id="mostPopularRoutesTable" class="table table-bordered table-hover")
+        thead
+            th Route
+            th Amount of sold tickets
+        tbody
+    h3 Most profitable routes
+    table(id="mostProfitableRoutesTable" class="table table-bordered table-hover")
+        thead
+            th Route
+            th Profit
+        tbody
+    h3 Sold tickets for train
+    form(class="form-inline")
+        div(class="form-group")
+            label Train
+            select(class="form-control" id="inputTrainId")
+            button(type="submit" class="btn btn-primary" id="findSoldTicketForTrainButton") Find
+    table(id="soldTicketsForTrainTable" class="table table-bordered table-hover")
+        thead
+            th ID
+            th Price
+            th Passenger
+            th Train
+            th Seat
+            th Date
+        tbody
+    h3 Trains without sold tickets
+    table(id="trainsWithoutSoldTicketsTable" class="table table-bordered table-hover")
+        thead
+            th ID
+            th Name
+            th Route
+            th Seats
+        tbody
+
+block append scripts
+    script(src='/public/js/statistics.js')
